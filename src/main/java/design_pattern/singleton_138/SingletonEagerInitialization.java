@@ -5,11 +5,11 @@ public class SingletonEagerInitialization {
     //Eager Initialization
     private static final SingletonEagerInitialization instance = new SingletonEagerInitialization();
 
-    private SingletonEagerInitialization(){
+    private SingletonEagerInitialization() {
 
     }
 
-    public static SingletonEagerInitialization getInstance(){
+    public static SingletonEagerInitialization getInstance() {
         /* solving the problem of concurrency in the worst way possible. Basically even if 2 threads calls getInstance method,
         then also same object will be shared */
         return instance;

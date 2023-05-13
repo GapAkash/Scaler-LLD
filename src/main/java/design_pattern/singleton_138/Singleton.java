@@ -3,12 +3,12 @@ package design_pattern.singleton_138;
 public class Singleton {
     private static Singleton instance = null;
 
-    private Singleton(){
+    private Singleton() {
 
     }
 
-    public static Singleton getInstance(){
-        if(instance == null)
+    public static Singleton getInstance() {
+        if (instance == null)
             instance = new Singleton();
         return instance;
     }

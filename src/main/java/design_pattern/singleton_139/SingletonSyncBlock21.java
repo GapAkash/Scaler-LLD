@@ -10,12 +10,10 @@ public class SingletonSyncBlock21 {
     }
 
     public static SingletonSyncBlock21 getInstance() {
-        if (instance == null) {
-            synchronized (SingletonSyncBlock21.class) {
-                //solving the multiple thread acquiring the lock using double-check locking mechanism
-                if (instance == null)
-                    instance = new SingletonSyncBlock21();
-            }
+        if (instance == null) synchronized (SingletonSyncBlock21.class) {
+            //solving the multiple thread acquiring the lock using double-check locking mechanism
+            if (instance == null)
+                instance = new SingletonSyncBlock21();
         }
         return instance;
     }
